@@ -24,8 +24,8 @@ class ApiOrcid {
                     'Accept' => "application/json"
                 ]
             ]);
-            return $jsn = json_decode($response->getBody(), true);
-            return $jsn;
+            return json_decode($response->getBody(), true);
+            
     
         }catch(Exception $e){
            return throw new Exception('ORCID  no encontrado');

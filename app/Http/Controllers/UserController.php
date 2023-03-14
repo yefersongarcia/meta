@@ -32,7 +32,7 @@ class UserController extends Controller
         
         try{
             $apiOrcid = new ApiOrcid();
-            return $jsn = $apiOrcid->get($orc_id);
+            $jsn = $apiOrcid->get($orc_id);
         }catch(Exception $e){
             return  response()->json(['status' => 'Error', 'message' => $e->getMessage()]);
         }
