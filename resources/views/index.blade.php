@@ -13,13 +13,12 @@
 <body>
 
     <div class="container mt-2">
-        <div class="row">
-            <div class="col-lg-12 margin-tb">
-                <div class="pull-left">
-                    <h2>List OrcId</h2>
-                </div>
+        <nav class="navbar navbar-dark bg-dark">
+            <!-- Navbar content -->
+            <div class="pull-left">
+                <h2 class="text-white">List OrcId</h2>
             </div>
-        </div>
+          </nav>
         @if ($message = Session::get('success'))
             <div class="alert alert-success">
                 <p>{{ $message }}</p>
@@ -28,7 +27,7 @@
         <table id="id_table" class="table table-bordered">
             <thead>
                 <tr>
-                    <th width="380px"> OrcId</th>
+                    <th width="380px">OrcId</th>
                     <th width="280px">Names</th>
                     <th width="280px">LastNames</th>
                     <th width="280px">Keywords</th>
@@ -39,18 +38,9 @@
             <tbody id="id_tbody">
             </tbody>
         </table>
-
+        <br>
         <div id="pagination-links" class="d-flex justify-content-center"></div>
     </div>
-    <br><br>
-
-    <div id="pagination-links"></div>
-    
-
-   
-    
-
-
 </body>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>

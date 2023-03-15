@@ -12,7 +12,7 @@ class ApiOrcid {
 
     public function __construct(){
 
-        $this->endpoint = env('ENDPOINT_ORCID', 'hhh');
+        $this->endpoint = env('ENDPOINT_ORCID', '');
         $this->client = new Client();
     }
 
@@ -25,8 +25,6 @@ class ApiOrcid {
                 ]
             ]);
             return json_decode($response->getBody(), true);
-            
-    
         }catch(Exception $e){
            return throw new Exception('ORCID  no encontrado');
         }

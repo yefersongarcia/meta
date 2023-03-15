@@ -25,7 +25,6 @@ const Render = ()  => {
             `)
         });
 
-        $("#pagination-links").empty(); // Limpiar el contenido existente
         $("#pagination-links").html(data.pagination); // Actualizar el contenido del elemento con el HTML de paginación
 
     });

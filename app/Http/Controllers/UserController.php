@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Http\Services\ApiOrcid;
 use App\Http\Resources\UserResource;        // return view('index',compact('datos'));
-
 use App\Models\Keyword;
 use Illuminate\Http\Request;
 use App\Models\User;
