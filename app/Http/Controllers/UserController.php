@@ -17,8 +17,14 @@ class UserController extends Controller
    
     public function index()
     {
-        $persons = User::paginate(4);
-        return response()->json(['status' => 'Exito','data' => UserResource::collection($persons)]);
+        $persons = User::simplePaginate(2);
+        $persons->appends(request()->query());
+        $pagination = $persons->links()->toHtml();
+        return response()->json([
+            'status' => 'Exito',
+            'data' => UserResource::collection($persons),
+            'pagination' => $pagination
+        ]);
     }
 
     public function create($orcid)

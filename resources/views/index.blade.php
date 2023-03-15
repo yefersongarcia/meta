@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    
+
     <div class="container mt-2">
         <div class="row">
             <div class="col-lg-12 margin-tb">
@@ -39,10 +39,24 @@
             <tbody id="id_tbody">
             </tbody>
         </table>
+
+        <div id="pagination-links" class="d-flex justify-content-center"></div>
     </div>
+    <br><br>
+
+    <div id="pagination-links"></div>
+    
+
+   
+    
+
+
 </body>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+</script>
 <script type="text/javascript" src="js/app.js"></script>
+
 </html>
