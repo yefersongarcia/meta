@@ -8,38 +8,25 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
 <body>
-
     <div class="container mt-2">
         <nav class="navbar navbar-dark bg-dark">
-            <!-- Navbar content -->
             <div class="pull-left">
                 <h2 class="text-white">List OrcId</h2>
             </div>
-          </nav>
+        </nav>
         @if ($message = Session::get('success'))
             <div class="alert alert-success">
                 <p>{{ $message }}</p>
             </div>
         @endif
-        <table id="id_table" class="table table-bordered">
-            <thead>
-                <tr>
-                    <th width="380px">OrcId</th>
-                    <th width="280px">Names</th>
-                    <th width="280px">LastNames</th>
-                    <th width="280px">Keywords</th>
-                    <th width="100px">Email</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody id="id_tbody">
-            </tbody>
-        </table>
-        <br>
-        <div id="pagination-links" class="d-flex justify-content-center"></div>
+        <div id="table_data">
+            @include('pagination')
+        </div>
     </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

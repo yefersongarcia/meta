@@ -44,8 +44,8 @@ class User extends Authenticatable
         return $this->hasMany(Keyword::class);  
     }
 
-    public function scopeSearch($query,$orcid){
-        return $query->where('orcid',$orcid);
+    public function scopeSearch($query,$orc_id){
+        return $query->where('orc_id',$orc_id);
     }
 
 

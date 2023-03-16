@@ -6,7 +6,6 @@ use GuzzleHttp\Client;
 
 class ApiOrcid {
 
-
     public $endpoint;
     public $client;
 
@@ -26,10 +25,9 @@ class ApiOrcid {
             ]);
             return json_decode($response->getBody(), true);
         }catch(Exception $e){
-           return throw new Exception('ORCID  no encontrado');
+           return throw new Exception('OrcId  no encontrado');
         }
     }
-
 }
 
 ?>
