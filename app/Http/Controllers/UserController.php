@@ -57,7 +57,6 @@ class UserController extends Controller
                 return response()->json(['status' => 'Error', 'message' => 'data is already registered']);
             }
 
-            // Si la excepción es por otro motivo, devuelve un mensaje genérico de error.
             return response()->json(['status' => 'Error', 'message' => 'Ha ocurrido un error al intentar crear el usuario.']);
         }
     }

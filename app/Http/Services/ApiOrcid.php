@@ -10,7 +10,6 @@ class ApiOrcid {
     public $client;
 
     public function __construct(){
-
         $this->endpoint = env('ENDPOINT_ORCID', '');
         $this->client = new Client();
     }
@@ -18,7 +17,7 @@ class ApiOrcid {
     public function get($orc_id){
 
         try{
-            $response = $this->client->request('GET', "{$this->endpoint}/{$orc_id}", [
+            $response = $this->client->request('GET', "https://pub.orcid.org/v3.0/{$orc_id}", [
                 'headers' => [
                     'Accept' => "application/json"
                 ]
